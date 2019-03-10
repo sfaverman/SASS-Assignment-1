@@ -1,0 +1,95 @@
+header, section, footer, aside, article, figure {
+	display: block;
+}
+* {
+	padding:0;
+	margin:0;
+}
+body {
+	background-color: #42413C;
+    font: 14px/1.4 Verdana, sans-serif;
+    color: #333;
+    
+}
+img {
+    width: 100%;
+    height:auto;
+}
+h1, h2 {
+font-family: 'Freckle Face', sans-serif;  
+}
+h1, h2,  p {
+	padding-right: 15px;
+	padding-left: 15px; 
+}
+p {
+	padding-bottom:10px;
+}
+a:link, a:visited {
+	color: #0B486B;
+	text-decoration: underline; 
+}
+a:hover, a:active { 
+	text-decoration: none;
+}
+#wrapper {
+    max-width: 960px;
+   	margin: 0 auto; 
+	background-color: #42413C;
+}
+
+header, footer {
+	background-color: #7bb8a5;
+}
+header h1 {
+	margin: 0;
+	font-size: 62px;
+    text-align: center; /* 1 column */
+}
+figcaption {
+    font-style: italic;
+    font-size: 10px;
+    color: #666;
+    text-align: center; /* 1 column */
+}
+article {
+	background-color: #FFFFFF;
+}
+article h1 {
+	font-size: 36px;
+}
+article h2 {
+	font-size: 24px;
+	margin-bottom: 0;
+	color: #3B8686;
+}
+aside {
+	background-color: #3B8686;
+	color: #fff;
+	padding: 10px 0;
+}
+aside h1 {
+	font-size: 24px;
+	border-bottom: solid 2px #fff;
+}
+footer {
+	text-align: center;
+	padding: 10px 0;
+}
+@media screen and (min-width: 650px) {
+    main#flexBox {
+        display: flex;
+        box-sizing: border-box;
+    }
+    
+    #flexBox article {
+        flex: 2;
+    }
+    #flexBox aside {
+        flex: 1;
+    }
+    figcaption { text-align: right; padding: 0 15px; }
+    header h1 { text-align: left; }
+    aside h1 { margin-right: 50px; }
+      
+}
