@@ -1,3 +1,10 @@
+//VARIABLES
+$headline: 'Freckle Face', sans-serif;
+$bodytext: Verdana, sans-serif;
+$bColorHFN: #7bb8a5; //header,footer,navigation abckground color
+$bBody: #42413C;     //background color for body and horiz separator
+$bg: background;
+
 header, section, footer, aside, article, figure {
 	display: block;
 }
@@ -6,8 +13,8 @@ header, section, footer, aside, article, figure {
 	margin:0;
 }
 body {
-	background-color: #42413C;
-    font: 14px/1.4 Verdana, sans-serif;
+	#{$bg}-color: $bBody;
+    font: 14px/1.4 $bodytext;
     color: #333;
 }
 img {
@@ -15,7 +22,7 @@ img {
     height:auto;
 }
 h1, h2 {
-font-family: 'Freckle Face', sans-serif;
+font-family: $headline;
 }
 h1, h2,  p {
 	padding-right: 15px;
@@ -33,7 +40,6 @@ a {
 #wrapper {
     max-width: 960px;
    	margin: 0 auto;
-	background-color: #42413C;
 }
 header > div {
 		width: 96%;
@@ -46,7 +52,7 @@ header.topBar {
     width: 100%;
     height: 3em;
     line-height: 3em; /* to vertically center text */
-    border-bottom: solid 1px #42413C;
+    border-bottom: solid 1px $bBody;
 
     img {
 		width: 15%;
@@ -55,7 +61,7 @@ header.topBar {
     }
 }
 header, footer {
-	background-color: #7bb8a5;
+	#{$bg}-color: $bColorHFN;
 }
 header h1 {
 	margin: 0;
@@ -64,9 +70,9 @@ header h1 {
 }
 /* Navigation - Hamburger menu for mobile */
 nav.mainNav {
-	background-color: #ededed;
+	#{$bg}-color: #ededed;
     ul { list-style-type: none; }
-    li { border-bottom: solid 1px #42413C;
+    li { border-bottom: solid 1px $bBody;
        a {
          display: block;
          padding: 0 .4em;
@@ -78,7 +84,7 @@ nav.mainNav {
     overflow: hidden;
 }
 .active {
-	background-color: #9ed3c2;
+	#{$bg}-color: #9ed3c2;
 }
    /* fixing problems on some browsers - tricking */
 body {
@@ -92,7 +98,7 @@ body {
 
     label {
 		display: block;
-		background: url("../images/nav-icon.png") no-repeat right center;
+		#{$bg}: url("../images/nav-icon.png") no-repeat right center;
 		position: relative;
 		/*top: -10px; */    /* HAMBURGER ICON POSITION */
 		right: 10px;
@@ -119,7 +125,7 @@ figcaption {
     text-align: center; /* 1 column */
 }
 article {
-	background-color: #FFFFFF;
+	#{$bg}-color: #FFFFFF;
 
     h1 { font-size: 36px; }
 
@@ -166,7 +172,7 @@ footer {
 	}
 
 	nav.mainNav {
-	  background-color: #7bb8a5;
+	  #{$bg}-color: $bColorHFN;
      }
 	#navigation {
 		label { display: none; }

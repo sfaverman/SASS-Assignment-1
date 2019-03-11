@@ -15,7 +15,7 @@ img {
   height: auto; }
 
 h1, h2 {
-  font-family: 'Freckle Face', sans-serif; }
+  font-family: "Freckle Face", sans-serif; }
 
 h1, h2, p {
   padding-right: 15px;
@@ -32,8 +32,7 @@ a {
 
 #wrapper {
   max-width: 960px;
-  margin: 0 auto;
-  background-color: #42413C; }
+  margin: 0 auto; }
 
 header > div {
   width: 96%;
