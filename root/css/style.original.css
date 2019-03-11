@@ -27,8 +27,9 @@ p {
 a {
 	color: #333;
 	text-decoration: none;
-
-	&:hover { color: #666; }
+}
+a:hover {
+	color: #666;
 }
 #wrapper {
     max-width: 960px;
@@ -47,13 +48,13 @@ header.topBar {
     height: 3em;
     line-height: 3em; /* to vertically center text */
     border-bottom: solid 1px #42413C;
-
-    img {
-		width: 15%;
-		height: 3em;
-		float: left;
-    }
 }
+.topBar img {
+	width: 15%;
+	height: 3em;
+	float: left;
+}
+
 header, footer {
 	background-color: #7bb8a5;
 }
@@ -65,14 +66,20 @@ header h1 {
 /* Navigation - Hamburger menu for mobile */
 nav.mainNav {
 	background-color: #ededed;
-    ul { list-style-type: none; }
-    li { border-bottom: solid 1px #42413C;
-       a {
-         display: block;
-         padding: 0 .4em;
-       }
-	}
 }
+.mainNav ul {
+    list-style-type: none;
+
+}
+.mainNav li {
+    border-bottom: solid 1px #42413C;
+
+}
+.mainNav li a {
+    display: block;
+    padding: 0 .4em;
+}
+
 #navigation nav {
     height: 0;
     overflow: hidden;
@@ -88,28 +95,25 @@ body {
     from { padding: 0;}
     to { padding: 0;}
 }
-#navigation {
+#navigation input[type=checkbox] {
+    position: absolute;
+    top: -999em;
+    left: -999em;  /* hide checkbox out of screen */
+}
+#navigation label {
+    display: block;
+    background: url("../images/nav-icon.png") no-repeat right center;
+    position: relative;
+    /*top: -10px; */    /* HAMBURGER ICON POSITION */
+    right: 10px;
+    text-indent: -999em;
+    cursor: pointer;
+    user-select: none;
+}
 
-    label {
-		display: block;
-		background: url("../images/nav-icon.png") no-repeat right center;
-		position: relative;
-		/*top: -10px; */    /* HAMBURGER ICON POSITION */
-		right: 10px;
-		text-indent: -999em;
-		cursor: pointer;
-		user-select: none;
-    }
-	input[type=checkbox] {
-		position: absolute;
-		top: -999em;
-		left: -999em;  /* hide checkbox out of screen */
-
-        &:checked ~ nav {
-			height: auto;
-			overflow: hidden;
-		}
-	}
+#navigation input[type=checkbox]:checked ~ nav {
+    height: auto;
+	overflow: hidden;
 }
 /* End of Navigation */
 figcaption {
@@ -120,24 +124,23 @@ figcaption {
 }
 article {
 	background-color: #FFFFFF;
-
-    h1 { font-size: 36px; }
-
-    h2 {
-	   font-size: 24px;
-	   margin-bottom: 0;
-	   color: #3B8686;
-    }
+}
+article h1 {
+	font-size: 36px;
+}
+article h2 {
+	font-size: 24px;
+	margin-bottom: 0;
+	color: #3B8686;
 }
 aside {
 	background-color: #3B8686;
 	color: #fff;
 	padding: 10px 0;
-
-    h1 {
+}
+aside h1 {
 	font-size: 24px;
 	border-bottom: solid 2px #fff;
-	}
 }
 footer {
 	text-align: center;
@@ -151,32 +154,37 @@ footer {
         box-sizing: border-box;
     }
 
-    #flexBox {
-		article { flex: 2; }
-        aside   { flex: 1; }
-	}
+    #flexBox article {
+        flex: 2;
+    }
+    #flexBox aside {
+        flex: 1;
+    }
     figcaption {
 		text-align: right;
 		padding: 0 15px;
 	}
-    header span { max-width: 22%; }
-
+    header h1 {
+		text-align: left;
+	}
     aside h1 {
 		margin-right: 50px;
 	}
-
+	header span {
+		max-width: 22%;
+	}
 	nav.mainNav {
 	  background-color: #7bb8a5;
      }
-	#navigation {
-		label { display: none; }
-        nav {
-			height: auto;
-			overflow: visible;
-            li {
-				display: inline-block;
-				border: none;
-            }
-        }
-	}
+	#navigation label {
+        display: none;
+    }
+    #navigation nav {
+        height: auto;
+        overflow: visible;
+    }
+    #navigation li {
+        display: inline-block;
+        border: none;
+    }
 }
