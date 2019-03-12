@@ -1,0 +1,27 @@
+header > div {
+		width: 96%;
+		margin: auto;
+		display: flex;
+		justify-content: space-between;
+}
+header.topBar {
+    position: relative; /* need for hamburger */
+    width: 100%;
+    height: 3em;
+    line-height: 3em; /* to vertically center text */
+    border-bottom: solid 1px $bBody;
+
+    img {
+		width: 15%;
+		height: 3em;
+		float: left;
+    }
+}
+header, footer {
+	#{$bg}-color: $bColorHFN;
+}
+header h1 {
+	margin: 0;
+	font-size: 62px;
+    text-align: center; /* 1 column */
+}

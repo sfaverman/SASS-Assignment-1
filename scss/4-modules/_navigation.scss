@@ -1,0 +1,50 @@
+/* Navigation - Hamburger menu for mobile */
+nav.mainNav {
+	#{$bg}-color: #ededed;
+    ul { list-style-type: none; }
+    li { border-bottom: solid 1px $bBody;
+       a {
+         display: block;
+         padding: 0 .4em;
+       }
+	}
+}
+#navigation nav {
+    height: 0;
+    overflow: hidden;
+}
+.active {
+	#{$bg}-color: #9ed3c2;
+}
+   /* fixing problems on some browsers - tricking */
+body {
+    -webkit-animation: bugfix infinite 1s;
+}
+@-webkit-keyframes bugfix {
+    from { padding: 0;}
+    to { padding: 0;}
+}
+#navigation {
+
+    label {
+		display: block;
+		#{$bg}: url("../images/nav-icon.png") no-repeat right center;
+		position: relative;
+		/*top: -10px; */    /* HAMBURGER ICON POSITION */
+		right: 10px;
+		text-indent: -999em;
+		cursor: pointer;
+		user-select: none;
+    }
+	input[type=checkbox] {
+		position: absolute;
+		top: -999em;
+		left: -999em;  /* hide checkbox out of screen */
+
+        &:checked ~ nav {
+			height: auto;
+			overflow: hidden;
+		}
+	}
+}
+/* End of Navigation */

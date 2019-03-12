@@ -1,0 +1,36 @@
+@media screen and (min-width: 650px) {
+
+    main#flexBox {
+        display: flex;
+        box-sizing: border-box;
+    }
+
+    #flexBox {
+		article { flex: 2; }
+        aside   { flex: 1; }
+	}
+    figcaption {
+		text-align: right;
+		padding: 0 15px;
+	}
+    header span { max-width: 22%; }
+
+    aside h1 {
+		margin-right: 50px;
+	}
+
+	nav.mainNav {
+	  #{$bg}-color: $bColorHFN;
+     }
+	#navigation {
+		label { display: none; }
+        nav {
+			height: auto;
+			overflow: visible;
+            li {
+				display: inline-block;
+				border: none;
+            }
+        }
+	}
+}

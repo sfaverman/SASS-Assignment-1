@@ -1,0 +1,29 @@
+body {
+	#{$bg}-color: $bBody;
+    font: 14px/1.4 $bodytext;
+    color: #333;
+}
+img {
+    width: 100%;
+    height:auto;
+}
+h1, h2 {
+font-family: $headline;
+}
+h1, h2,  p {
+	padding-right: 15px;
+	padding-left: 15px;
+}
+p {
+	padding-bottom:10px;
+}
+a {
+	color: #333;
+	text-decoration: none;
+
+	&:hover { color: #666; }
+}
+#wrapper {
+    max-width: 960px;
+   	margin: 0 auto;
+}
