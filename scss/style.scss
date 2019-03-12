@@ -5,13 +5,8 @@ $bColorHFN: #7bb8a5; //header,footer,navigation abckground color
 $bBody: #42413C;     //background color for body and horiz separator
 $bg: background;
 
-header, section, footer, aside, article, figure {
-	display: block;
-}
-* {
-	padding:0;
-	margin:0;
-}
+@import "_reset.scss"; //partials
+
 body {
 	#{$bg}-color: $bBody;
     font: 14px/1.4 $bodytext;
